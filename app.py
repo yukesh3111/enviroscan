@@ -482,7 +482,7 @@ def userprofile():
         user=session["user"]
         print(user)
         user_username=userdetails.query.filter_by(username=user).first()
-        return render_template("User-profile.html",user=user_username.username,username=user_username.username,password=user_username.password,name=user_username.name,surename=user_username.surename,phone_no=user_username.phone_no,email=user_username.email,address=user_username.address,city=user_username.city,state=user_username.state)
+        return render_template("User-Profile.html",user=user_username.username,username=user_username.username,password=user_username.password,name=user_username.name,surename=user_username.surename,phone_no=user_username.phone_no,email=user_username.email,address=user_username.address,city=user_username.city,state=user_username.state)
     else:
         return redirect(url_for("signup"))
 
